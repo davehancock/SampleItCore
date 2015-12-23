@@ -1,6 +1,42 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+plugins {
+    id "com.jfrog.bintray" version "1.5"
+}
+
 group 'com.djh.sampleit'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 apply plugin: 'java'
+apply plugin: 'maven-publish'
 
-sourceCompatibility = 1.8
+
+// Bintray Maven Artifact Publishing.
+bintray {
+    user = 'daves125125'
+    key = '5db133b5483b29dacb4c41efbb1b8a773db2966b'
+    pkg {
+        version {
+            name = '1.0-Final'
+        }
+        repo = 'maven-repo'
+        name = 'SampleItCore'
+        userOrg = 'daves125125'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/daves125125/SampleItCore.git'
+    }
+    publications = ['MyPublication']
+}
+
+publishing {
+    publications {
+        MyPublication(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
