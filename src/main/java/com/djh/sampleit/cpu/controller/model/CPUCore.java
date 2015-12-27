@@ -9,9 +9,6 @@ public class CPUCore {
 
     private int cpuTemp;
 
-    public CPUCore(){
-    }
-
     public double getCpuClockSpeed() {
         return cpuClockSpeed;
     }

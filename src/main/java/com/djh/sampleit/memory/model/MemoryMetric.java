@@ -5,29 +5,33 @@ import com.djh.sampleit.metadata.MetricMetadata;
 /**
  * @author David Hancock
  */
-public class MemoryMetric{
+public class MemoryMetric {
 
-    private long totalMemoryCapacity;
+    private MetricMetadata metricMetadata;
 
-    private long totalMemoryUsed;
+    private long totalMemory;
 
-    public MemoryMetric(){
+    private long totalAvailableMemory;
+
+    public MemoryMetric() {
     }
 
-    public long getTotalMemoryUsed() {
-        return totalMemoryUsed;
+    public MemoryMetric(MetricMetadata metricMetadata, long totalMemory, long totalAvailableMemory) {
+        this.metricMetadata = metricMetadata;
+        this.totalMemory = totalMemory;
+        this.totalAvailableMemory = totalAvailableMemory;
     }
 
-    public void setTotalMemoryUsed(long totalMemoryUsed) {
-        this.totalMemoryUsed = totalMemoryUsed;
+    public MetricMetadata getMetricMetadata() {
+        return metricMetadata;
     }
 
-    public long getTotalMemoryCapacity() {
-        return totalMemoryCapacity;
+    public long getTotalMemory() {
+        return totalMemory;
     }
 
-    public void setTotalMemoryCapacity(long totalMemoryCapacity) {
-        this.totalMemoryCapacity = totalMemoryCapacity;
+    public long getTotalAvailableMemory() {
+        return totalAvailableMemory;
     }
 
 }

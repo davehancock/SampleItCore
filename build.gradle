@@ -9,11 +9,10 @@ plugins {
 }
 
 group 'com.djh.sampleit'
-version '1.0'
+version '1.1.0'
 
 apply plugin: 'java'
 apply plugin: 'maven-publish'
-
 
 // Bintray Maven Artifact Publishing.
 bintray {
@@ -21,7 +20,7 @@ bintray {
     key = '5db133b5483b29dacb4c41efbb1b8a773db2966b'
     pkg {
         version {
-            name = '1.0-Final'
+            name = '1.1.0-Final'
         }
         repo = 'maven-repo'
         name = 'SampleItCore'

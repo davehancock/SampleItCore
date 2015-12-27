@@ -17,19 +17,17 @@ public class CPUMetric {
     public CPUMetric(){
     }
 
-    public MetricMetadata getMetricMetadata() {
-        return metricMetadata;
+    public CPUMetric(MetricMetadata metricMetadata, List<CPUCore> cpuCores) {
+        this.metricMetadata = metricMetadata;
+        this.cpuCores = cpuCores;
     }
 
-    public void setMetricMetadata(MetricMetadata metricMetadata) {
-        this.metricMetadata = metricMetadata;
+    public MetricMetadata getMetricMetadata() {
+        return metricMetadata;
     }
 
     public List<CPUCore> getCpuCores() {
         return cpuCores;
     }
 
-    public void setCpuCores(List<CPUCore> cpuCores) {
-        this.cpuCores = cpuCores;
-    }
 }

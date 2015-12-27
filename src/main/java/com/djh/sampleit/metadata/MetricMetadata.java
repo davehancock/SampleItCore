@@ -11,7 +11,11 @@ public class MetricMetadata {
 
     private Date date;
 
-    public MetricMetadata(){
+    private String ipAddress;
+
+    private String operatingSystem;
+
+    public MetricMetadata() {
     }
 
     public MetricMetadata(String hostname, Date date) {
@@ -23,16 +27,24 @@ public class MetricMetadata {
         return hostname;
     }
 
-    public void setHostname(String hostname) {
-        this.hostname = hostname;
-    }
-
     public Date getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
+    public void setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+    }
+
+    public String getOperatingSystem() {
+        return operatingSystem;
+    }
+
+    public void setOperatingSystem(String operatingSystem) {
+        this.operatingSystem = operatingSystem;
     }
 
 }
