@@ -7,44 +7,48 @@ import java.util.Date;
  */
 public class MetricMetadata {
 
-    private String hostname;
-
     private Date date;
 
-    private String ipAddress;
+    private String hostname;
+
+    private String macAddress;
 
     private String operatingSystem;
+
+    private String originPublicIPAddress;
 
     public MetricMetadata() {
     }
 
-    public MetricMetadata(String hostname, Date date) {
-        this.hostname = hostname;
+    public MetricMetadata(Date date, String hostname, String macAddress, String operatingSystem) {
         this.date = date;
+        this.hostname = hostname;
+        this.macAddress = macAddress;
+        this.operatingSystem = operatingSystem;
     }
 
-    public String getHostname() {
-        return hostname;
+    public void setOriginPublicIPAddress(String originPublicIPAddress) {
+        this.originPublicIPAddress = originPublicIPAddress;
     }
 
     public Date getDate() {
         return date;
     }
 
-    public String getIpAddress() {
-        return ipAddress;
+    public String getHostname() {
+        return hostname;
     }
 
-    public void setIpAddress(String ipAddress) {
-        this.ipAddress = ipAddress;
+    public String getMacAddress() {
+        return macAddress;
     }
 
     public String getOperatingSystem() {
         return operatingSystem;
     }
 
-    public void setOperatingSystem(String operatingSystem) {
-        this.operatingSystem = operatingSystem;
+    public String getOriginPublicIPAddress() {
+        return originPublicIPAddress;
     }
 
 }
